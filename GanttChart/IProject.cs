@@ -58,6 +58,26 @@ namespace Braincase.GanttChart
         /// </summary>
         public TimeSpan Slack { get; internal set; }
 
+        //将任务数据从数据库中读取并显示的功能我已经实现了，但是如何将修改后的数据提交的数据库中还未实现。程序中所有的时间都是timespan类型，而要保存的数据都是DateTime类型的。有没有什么好的方法可以实现修改的数据能提交的数据库中呢？
+
+        ///
+        /// 项目开始时间
+        ///
+        public DateTime StartDate { get; set; }
+
+        ///
+        /// 项目结束时间
+        ///
+        public DateTime EndDate { get; set; }
+
+        ///
+        /// 标识符
+        ///
+        public object Id { get; set; }
+
+        //使用
+        //var stage = new MyTask(_mManager) { Name = "P_(" + schedule.Id + ")" + stageName,StartDate = beginDate, EndDate = endDate,Id = schedule.Id};
+        
         /// <summary>
         /// Convert this Task to a descriptive string
         /// </summary>
